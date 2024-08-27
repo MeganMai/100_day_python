@@ -1,0 +1,24 @@
+def add(n1, n2):
+    return n1 + n2
+def subtract(n1, n2):
+    return n1 - n2
+def multiply(n1, n2):
+    return n1 * n2
+def divide(n1, n2):
+    return n1 / n2
+
+operations = {
+    '+': add,
+    '-': subtract,
+    '*': multiply,
+    '/': divide
+}
+
+loop = 'yes'
+while loop == 'yes':
+    n1 = float(input('What is the first number? '))
+    n2 = float(input('What is the second number? '))
+    sign = input('What is the operation? +,-,* or / ')
+    result  = operations[sign](n1,n2)
+    print(f'Result is {n1} {sign} {n2} = {result}')
+    loop =input('Do you want to continue Yes/ No ').lower()
